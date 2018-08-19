@@ -243,7 +243,7 @@ Vector3 BuildingObjectImplementation::getEjectionPoint() {
 						normal.normalize();
 
 						Vector3 floor = box.center() - Vector3(0, box.extents().getY(), 0);
-						floor += normal * 2.5f;
+						floor += normal * templateData->getEjectDistance();
 
 						Matrix4 transform;
 
@@ -361,7 +361,7 @@ bool BuildingObjectImplementation::isAllowedEntry(CreatureObject* player) {
 	EnclaveContainerComponent* encComp = containerComponent.castTo<EnclaveContainerComponent*>();
 
 	if (encComp != nullptr) {
-		return checkContainerPermission(player, ContainerPermissions::WALKIN);
+		return encComp->checkContainerPermission(asBuildingObject(), player, ContainerPermissions::WALKIN);
 	}
 
 	if (!isClientObject()) {
@@ -595,7 +595,7 @@ void BuildingObjectImplementation::destroyObjectFromDatabase(
 	if (signObject != nullptr)
 		signObject->destroyObjectFromDatabase(true);
 
-	//Remove all child creature objects from database
+	//Remove all child creature objects from world
 	for (int i = 0; i < childCreatureObjects.size(); ++i) {
 		ManagedReference<CreatureObject*> child = childCreatureObjects.get(i);
 
@@ -610,7 +610,7 @@ void BuildingObjectImplementation::destroyObjectFromDatabase(
 			ai->setRespawnTimer(0);
 		}
 
-		child->destroyObjectFromDatabase(true);
+		child->destroyObjectFromWorld(true);
 	}
 
 	//Loop through the cells and delete all objects from the database.
@@ -717,6 +717,13 @@ void BuildingObjectImplementation::onEnter(CreatureObject* player) {
 			ejectObject(player);
 			return;
 		}
+	}
+
+	EnclaveContainerComponent* encComp = containerComponent.castTo<EnclaveContainerComponent*>();
+
+	if (encComp != nullptr && !encComp->checkContainerPermission(asBuildingObject(), player, ContainerPermissions::WALKIN)) {
+		ejectObject(player);
+		return;
 	}
 
 	if (accessFee > 0 && !isOnEntryList(player)) {
@@ -1481,7 +1488,7 @@ void BuildingObjectImplementation::destroyChildObjects() {
 		}
 
 		childCreatureObjects.drop(child);
-		child->destroyObjectFromDatabase(true);
+		child->destroyObjectFromWorld(true);
 	}
 }
 
