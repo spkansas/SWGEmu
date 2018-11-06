@@ -49,4 +49,4 @@ sql/insert_strings.sql
 build.out
 build.out.prev
 bin/screenlog*
-
+compile_commands.json
