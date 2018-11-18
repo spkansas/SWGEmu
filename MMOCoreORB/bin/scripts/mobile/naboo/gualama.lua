@@ -25,12 +25,8 @@ gualama = Creature:new {
 	creatureBitmask = HERD,
 	optionsBitmask = AIENABLED,
 	diet = CARNIVORE,
-
-<<<<<<< HEAD
-	templates = {"object/mobile/gualama.iff"},
-=======
+	
 	templates = {"object/mobile/gualama_hue.iff"},
->>>>>>> core3/unstable
 	hues = { 8, 9, 10, 11, 12, 13, 14, 15 },
 	controlDeviceTemplate = "object/intangible/pet/gualama_hue.iff",
 	lootGroups = {},
