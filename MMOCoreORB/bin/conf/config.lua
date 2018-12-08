@@ -101,6 +101,7 @@ ZonesEnabled = {
 	"dantooine",
 	"dathomir",
 	"dungeon1",
+	"dungeon2",
 	"endor",
 	"hoth",
 	"kaas",
@@ -145,6 +146,7 @@ ZonesEnabled = {
 TrePath = "/home/swgemu/workspace/tre"
 
 TreFiles = {
+	"mtg_patch_023.tre",
 	"mtg_patch_022.tre",
 	"mtg_planets.tre",
 	"mtg_patch_021.tre",
