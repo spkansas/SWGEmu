@@ -35,9 +35,9 @@ object_weapon_melee_sword_crafted_saber_sword_lightsaber_mandalorian = object_we
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
 	-- combat_meleespecialize_twohandlightsaber, combat_meleespecialize_polearmlightsaber, jedi_general
 	xpType = "jedi_general",
-	
+
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_onehandlightsaber_gen4" },
+	certificationsRequired = { "cert_onehandlightsaber_gen1" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "onehandlightsaber_accuracy" },
 
@@ -81,7 +81,7 @@ object_weapon_melee_sword_crafted_saber_sword_lightsaber_mandalorian = object_we
 	noTrade = 1,
 	
 	childObjects = {
-		{templateFile = "object/tangible/inventory/lightsaber_inventory_4.iff", x = 0, z = 0, y = 0, ox = 0, oy = 0, oz = 0, ow = 0, cellid = -1, containmentType = 4}
+		{templateFile = "object/tangible/inventory/lightsaber_inventory_1.iff", x = 0, z = 0, y = 0, ox = 0, oy = 0, oz = 0, ow = 0, cellid = -1, containmentType = 4}
 	},
 
 

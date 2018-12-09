@@ -35,9 +35,9 @@ object_weapon_melee_sword_crafted_saber_sword_lightsaber_one_handed_gen1_s02 = o
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
 	-- combat_meleespecialize_twohandlightsaber, combat_meleespecialize_polearmlightsaber, jedi_general
 	xpType = "jedi_general",
-	
+
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_onehandlightsaber_gen4" },
+	certificationsRequired = { "cert_onehandlightsaber_gen1" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "onehandlightsaber_accuracy" },
 

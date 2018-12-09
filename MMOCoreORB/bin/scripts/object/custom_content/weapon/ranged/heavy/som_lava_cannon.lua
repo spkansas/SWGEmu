@@ -41,12 +41,42 @@
 --this exception also makes it possible to release a modified version 
 
 
-object_weapon_ranged_heavy_heavy_rocket_launcher = object_weapon_ranged_heavy_shared_heavy_rocket_launcher:new {
-
-	objectMenuComponent = {"cpp", "FireHeavyWeaponMenuComponent"},
+object_weapon_ranged_heavy_som_lava_cannon = object_weapon_ranged_heavy_shared_som_lava_cannon:new {
 	
-	playerRaces = { "object/creature/player/bothan_male.iff",
+	playerRaces = { 	"object/creature/player/smc_female.iff",
+				"object/creature/player/smc_male.iff",
+				"object/creature/player/talz_male.iff",
+				"object/creature/player/talz_female.iff",
+				"object/creature/player/togruta_female.iff",
+				"object/creature/player/togruta_male.iff",
+				"object/creature/player/weequay_male.iff",
+				"object/creature/player/weequay_female.iff",
+				"object/creature/player/nautolan_male.iff",
+				"object/creature/player/nautolan_female.iff",
+				"object/creature/player/nightsister_female.iff",
+				"object/creature/player/nightsister_male.iff",
+				"object/creature/player/nikto_male.iff",
+				"object/creature/player/nikto_female.iff",
+				"object/creature/player/quarren_male.iff",
+				"object/creature/player/quarren_female.iff",
+				"object/creature/player/ishi_tib_male.iff",
+				"object/creature/player/ishi_tib_female.iff",
+				"object/creature/player/hutt_female.iff",
+				"object/creature/player/hutt_male.iff",
+				"object/creature/player/gran_male.iff",
+				"object/creature/player/gran_female.iff",
+				"object/creature/player/gotal_male.iff",
+				"object/creature/player/gotal_female.iff",
+				"object/creature/player/aqualish_female.iff",
+				"object/creature/player/aqualish_male.iff",
+				"object/creature/player/bith_female.iff",
+				"object/creature/player/bith_male.iff",
+				"object/creature/player/chiss_female.iff",
+				"object/creature/player/chiss_male.iff",
+				"object/creature/player/devaronian_male.iff",
+				"object/creature/player/devaronian_female.iff",
 				"object/creature/player/bothan_female.iff",
+				"object/creature/player/bothan_male.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/ithorian_male.iff",
@@ -68,13 +98,14 @@ object_weapon_ranged_heavy_heavy_rocket_launcher = object_weapon_ranged_heavy_sh
 
 	-- RANGEDATTACK, MELEEATTACK, FORCEATTACK, TRAPATTACK, GRENADEATTACK, HEAVYACIDBEAMATTACK,
 	-- HEAVYLIGHTNINGBEAMATTACK, HEAVYPARTICLEBEAMATTACK, HEAVYROCKETLAUNCHERATTACK, HEAVYLAUNCHERATTACK
-	attackType = HEAVYROCKETLAUNCHERATTACK,
+	attackType = RANGEDATTACK,
+	weaponType = SPECIALHEAVYWEAPON,
 
-	-- ENERGY, KINETIC, ELECTRICITY, STUN, BLAST, HEAT, COLD, ACID, FORCE, LIGHTSABER
-	damageType = BLAST,
+	-- ENERGY, KINETIC, ELECTRICITY, STUN, BLAST, HEAT, COLD, ACID, LIGHTSABER
+	damageType = HEAT,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = HEAVY,
+	armorPiercing = NONE,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -82,56 +113,54 @@ object_weapon_ranged_heavy_heavy_rocket_launcher = object_weapon_ranged_heavy_sh
 	xpType = "combat_rangedspecialize_heavy",
 
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_rocket_launcher" },
+	certificationsRequired = { "cert_rifle_flame_thrower" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
-	creatureAccuracyModifiers = { "heavy_rocket_launcher_accuracy" },
-
-	creatureAimModifiers = { },
+	creatureAccuracyModifiers = { "heavy_flame_thrower_accuracy" },
 
 	-- See http://www.ocdsoft.com/files/defense.xls
 	defenderDefenseModifiers = { "ranged_defense" },
 
 	-- Leave as "dodge" for now, may have additions later
-	defenderSecondaryDefenseModifiers = { },
+	defenderSecondaryDefenseModifiers = { "block" },
 
 	-- See http://www.ocdsoft.com/files/speed.xls
-	speedModifiers = { "heavy_rocket_launcher_speed" },
+	speedModifiers = { "heavy_flame_thrower_speed" },
 
-	useCount = 40,
+	-- Leave blank for now
+	damageModifiers = {  },
 
-	combatSpam = "rocket_launcher",
-	animationType = "rocket_launcher",
 
-	healthAttackCost = 95,
-	actionAttackCost = 42,
-	mindAttackCost = 23,
+	-- The values below are the default values.  To be used for blue frog objects primarily
+	healthAttackCost = 84,
+	actionAttackCost = 20,
+	mindAttackCost = 20,
 	forceCost = 0,
 
+	pointBlankAccuracy = 15,
 	pointBlankRange = 0,
-	pointBlankAccuracy = -30,
 
-	idealRange = 10,
-	idealAccuracy = 50,
+	idealRange = 50,
+	idealAccuracy = -50,
 
 	maxRange = 64,
-	maxRangeAccuracy = -80,
+	maxRangeAccuracy = 0,
 
-	minDamage = 100,
-	maxDamage = 500,
+	minDamage = 480,
+	maxDamage = 830,
 
-	attackSpeed = 10,
+	attackSpeed = 6,
 
-	woundsRatio = 24,
+	woundsRatio = 12,
 
-	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 2},
-	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},
-	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency", "expEffeciency"},
-	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "charges", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 900, 1550, 12, 17, 30, 750, -120, 20, 48, 0, 25, 124, 85, 60},
-	experimentalMax = {0, 0, 1350, 4500, 7, 31, 65, 1500, -90, 60, 48, 35, 50, 67, 40, 36},
-	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1},
+	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2},
+	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},
+	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "expRange", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
+	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
+	experimentalMin = {0, 0, 240, 690, 7.2, 8, 30, 750, 10, 50, -65, 84, 20, 20},
+	experimentalMax = {0, 0, 476, 826, 4.9, 16, 65, 1500, 20, 50, -35, 45, 10, 10},
+	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
 
-ObjectTemplates:addTemplate(object_weapon_ranged_heavy_heavy_rocket_launcher, "object/weapon/ranged/heavy/heavy_rocket_launcher.iff")
+ObjectTemplates:addTemplate(object_weapon_ranged_heavy_som_lava_cannon, "object/weapon/ranged/heavy/som_lava_cannon.iff")

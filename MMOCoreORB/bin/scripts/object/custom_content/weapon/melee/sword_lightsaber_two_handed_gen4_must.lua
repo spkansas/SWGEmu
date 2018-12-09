@@ -77,21 +77,23 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen4_must
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
 	-- combat_meleespecialize_twohandlightsaber, combat_meleespecialize_polearmlightsaber, combat_meleespecialize_onehandlightsaber
-	xpType = "jedi_general",
-	
+	xpType = "combat_meleespecialize_twohand",
+
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_twohandlightsaber_gen4" },
+	certificationsRequired = { "cert_sword_2h_axe" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
-	creatureAccuracyModifiers = { "twohandlightsaber_accuracy" },
+	creatureAccuracyModifiers = { "twohandmelee_accuracy" },
 
 	-- See http://www.ocdsoft.com/files/defense.xls
 	defenderDefenseModifiers = { "melee_defense" },
 
 	-- Leave as "dodge" for now, may have additions later
-	defenderSecondaryDefenseModifiers = { "saber_block" },
+	defenderSecondaryDefenseModifiers = { "counterattack" },
+
+	defenderToughnessModifiers = { "twohandmelee_toughness" },
 
 	-- See http://www.ocdsoft.com/files/speed.xls
-	speedModifiers = { "twohandlightsaber_speed" },
+	speedModifiers = { "twohandmelee_speed" },
 
 	-- Leave blank for now
 	damageModifiers = { },
@@ -119,14 +121,6 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen4_must
 
 	woundsRatio = 17,
 
-	defenderToughnessModifiers = { "lightsaber_toughness" },
-	
-	noTrade = 1,
-	
-	childObjects = {
-		{templateFile = "object/tangible/inventory/lightsaber_inventory_4.iff", x = 0, z = 0, y = 0, ox = 0, oy = 0, oz = 0, ow = 0, cellid = -1, containmentType = 4}
-	},
-
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalProperties = {"XX", "XX", "SR", "SR", "SR", "SR", "SR", "SR", "SR", "XX", "SR", "XX", "SR", "SR", "SR"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -138,4 +132,4 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen4_must
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
 
-ObjectTemplates:addTemplate(object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen4_must, "object/weapon/melee/2h_sword/crafted_saber/sword_lightsaber_two_handed_gen4_must.iff")
+ObjectTemplates:addTemplate(object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen4_must, "object/weapon/melee/2h_sword/crafted_saber/sword_lightsaber_two_handed_gcw_gen4_must.iff")

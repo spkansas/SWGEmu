@@ -81,7 +81,7 @@ object_weapon_ranged_pistol_pistol_green_bolt = object_weapon_ranged_pistol_shar
 	xpType = "combat_rangedspecialize_pistol",
 
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_pistol_cdef" },
+	certificationsRequired = {  },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "pistol_accuracy" },
 

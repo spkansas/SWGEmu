@@ -100,26 +100,26 @@ object_weapon_ranged_carbine_carbine_bothan_bola_generic = object_weapon_ranged_
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 0,
-	actionAttackCost = 0,
-	mindAttackCost = 0,
+	healthAttackCost = 9,
+	actionAttackCost = 15,
+	mindAttackCost = 9,
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = 100,
+	pointBlankAccuracy = 0,
 
 	idealRange = 50,
-	idealAccuracy = 100,
+	idealAccuracy = 64,
 
-	maxRange = 200,
-	maxRangeAccuracy = 100,
+	maxRange = 64,
+	maxRangeAccuracy = 46,
 
-	minDamage = 3000,
-	maxDamage = 4000,
+	minDamage = 125,
+	maxDamage = 225,
 
-	attackSpeed = 1,
+	attackSpeed = 2.7,
 
-	woundsRatio = 80,
+	woundsRatio = 15,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},

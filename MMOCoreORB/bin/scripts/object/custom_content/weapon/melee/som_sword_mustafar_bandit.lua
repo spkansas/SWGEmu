@@ -1,7 +1,39 @@
 object_weapon_melee_sword_som_sword_mustafar_bandit = object_weapon_melee_sword_shared_som_sword_mustafar_bandit:new {
 
-	playerRaces = { "object/creature/player/bothan_male.iff",
+	playerRaces = { 	"object/creature/player/smc_female.iff",
+				"object/creature/player/smc_male.iff",
+				"object/creature/player/talz_male.iff",
+				"object/creature/player/talz_female.iff",
+				"object/creature/player/togruta_female.iff",
+				"object/creature/player/togruta_male.iff",
+				"object/creature/player/weequay_male.iff",
+				"object/creature/player/weequay_female.iff",
+				"object/creature/player/nautolan_male.iff",
+				"object/creature/player/nautolan_female.iff",
+				"object/creature/player/nightsister_female.iff",
+				"object/creature/player/nightsister_male.iff",
+				"object/creature/player/nikto_male.iff",
+				"object/creature/player/nikto_female.iff",
+				"object/creature/player/quarren_male.iff",
+				"object/creature/player/quarren_female.iff",
+				"object/creature/player/ishi_tib_male.iff",
+				"object/creature/player/ishi_tib_female.iff",
+				"object/creature/player/hutt_female.iff",
+				"object/creature/player/hutt_male.iff",
+				"object/creature/player/gran_male.iff",
+				"object/creature/player/gran_female.iff",
+				"object/creature/player/gotal_male.iff",
+				"object/creature/player/gotal_female.iff",
+				"object/creature/player/aqualish_female.iff",
+				"object/creature/player/aqualish_male.iff",
+				"object/creature/player/bith_female.iff",
+				"object/creature/player/bith_male.iff",
+				"object/creature/player/chiss_female.iff",
+				"object/creature/player/chiss_male.iff",
+				"object/creature/player/devaronian_male.iff",
+				"object/creature/player/devaronian_female.iff",
 				"object/creature/player/bothan_female.iff",
+				"object/creature/player/bothan_male.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/ithorian_male.iff",
@@ -29,7 +61,7 @@ object_weapon_melee_sword_som_sword_mustafar_bandit = object_weapon_melee_sword_
 	damageType = KINETIC,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = NONE,
+	armorPiercing = LIGHT,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -37,7 +69,7 @@ object_weapon_melee_sword_som_sword_mustafar_bandit = object_weapon_melee_sword_
 	xpType = "combat_meleespecialize_onehand",
 
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_sword_01" },
+	certificationsRequired = { "cert_sword_02" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "onehandmelee_accuracy" },
 
@@ -83,8 +115,8 @@ object_weapon_melee_sword_som_sword_mustafar_bandit = object_weapon_melee_sword_
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 14, 63, 4.6, 9, 750, 5, 5, 3, 5, 4, 27, 29, 29},
-	experimentalMax = {0, 0, 26, 117, 3.2, 18, 1500, 15, 15, 3, 15, 4, 15, 15, 15},
+	experimentalMin = {0, 0, 18, 70, 4, 12, 750, -2, -2, 3, -2, 4, 23, 52, 33},
+	experimentalMax = {0, 0, 33, 130, 2.8, 24, 1500, 8, 8, 3, 8, 4, 13, 28, 18},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

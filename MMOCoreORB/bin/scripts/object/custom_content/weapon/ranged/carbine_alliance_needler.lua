@@ -43,8 +43,40 @@
 
 object_weapon_ranged_carbine_carbine_alliance_needler = object_weapon_ranged_carbine_shared_carbine_alliance_needler:new {
 	
-	playerRaces = { "object/creature/player/bothan_male.iff",
+	playerRaces = { 	"object/creature/player/smc_female.iff",
+				"object/creature/player/smc_male.iff",
+				"object/creature/player/talz_male.iff",
+				"object/creature/player/talz_female.iff",
+				"object/creature/player/togruta_female.iff",
+				"object/creature/player/togruta_male.iff",
+				"object/creature/player/weequay_male.iff",
+				"object/creature/player/weequay_female.iff",
+				"object/creature/player/nautolan_male.iff",
+				"object/creature/player/nautolan_female.iff",
+				"object/creature/player/nightsister_female.iff",
+				"object/creature/player/nightsister_male.iff",
+				"object/creature/player/nikto_male.iff",
+				"object/creature/player/nikto_female.iff",
+				"object/creature/player/quarren_male.iff",
+				"object/creature/player/quarren_female.iff",
+				"object/creature/player/ishi_tib_male.iff",
+				"object/creature/player/ishi_tib_female.iff",
+				"object/creature/player/hutt_female.iff",
+				"object/creature/player/hutt_male.iff",
+				"object/creature/player/gran_male.iff",
+				"object/creature/player/gran_female.iff",
+				"object/creature/player/gotal_male.iff",
+				"object/creature/player/gotal_female.iff",
+				"object/creature/player/aqualish_female.iff",
+				"object/creature/player/aqualish_male.iff",
+				"object/creature/player/bith_female.iff",
+				"object/creature/player/bith_male.iff",
+				"object/creature/player/chiss_female.iff",
+				"object/creature/player/chiss_male.iff",
+				"object/creature/player/devaronian_male.iff",
+				"object/creature/player/devaronian_female.iff",
 				"object/creature/player/bothan_female.iff",
+				"object/creature/player/bothan_male.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/ithorian_male.iff",
@@ -64,15 +96,16 @@ object_weapon_ranged_carbine_carbine_alliance_needler = object_weapon_ranged_car
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
 
+
 	-- RANGEDATTACK, MELEEATTACK, FORCEATTACK, TRAPATTACK, GRENADEATTACK, HEAVYACIDBEAMATTACK,
 	-- HEAVYLIGHTNINGBEAMATTACK, HEAVYPARTICLEBEAMATTACK, HEAVYROCKETLAUNCHERATTACK, HEAVYLAUNCHERATTACK
 	attackType = RANGEDATTACK,
 
 	-- ENERGY, KINETIC, ELECTRICITY, STUN, BLAST, HEAT, COLD, ACID, FORCE, LIGHTSABER
-	damageType = ENERGY,
+	damageType = KINETIC,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = NONE,
+	armorPiercing = LIGHT,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -80,7 +113,7 @@ object_weapon_ranged_carbine_carbine_alliance_needler = object_weapon_ranged_car
 	xpType = "combat_rangedspecialize_carbine",
 
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_carbine_cdef" },
+	certificationsRequired = { "cert_carbine_laser" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "carbine_accuracy" },
 
@@ -100,26 +133,26 @@ object_weapon_ranged_carbine_carbine_alliance_needler = object_weapon_ranged_car
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 0,
-	actionAttackCost = 0,
-	mindAttackCost = 0,
+	healthAttackCost = 7,
+	actionAttackCost = 15,
+	mindAttackCost = 7,
 	forceCost = 0,
 
-	pointBlankRange = 0,
-	pointBlankAccuracy = 100,
+	pointBlankRange = 1,
+	pointBlankAccuracy = 25,
 
 	idealRange = 50,
-	idealAccuracy = 100,
+	idealAccuracy = 64,
 
-	maxRange = 200,
-	maxRangeAccuracy = 100,
+	maxRange = 64,
+	maxRangeAccuracy = 44,
 
-	minDamage = 3000,
-	maxDamage = 4000,
+	minDamage = 125,
+	maxDamage = 225,
 
-	attackSpeed = 1,
+	attackSpeed = 2.5,
 
-	woundsRatio = 80,
+	woundsRatio = 16,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},

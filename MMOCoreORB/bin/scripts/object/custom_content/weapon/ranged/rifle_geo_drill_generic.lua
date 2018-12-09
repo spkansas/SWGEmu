@@ -100,26 +100,26 @@ object_weapon_ranged_rifle_rifle_geo_drill_generic = object_weapon_ranged_rifle_
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 0,
-	actionAttackCost = 0,
-	mindAttackCost = 0,
+	healthAttackCost = 12,
+	actionAttackCost = 12,
+	mindAttackCost = 24,
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = 100,
+	pointBlankAccuracy = 0,
 
-	idealRange = 50,
-	idealAccuracy = 100,
+	idealRange = 60,
+	idealAccuracy = 64,
 
-	maxRange = 150,
-	maxRangeAccuracy = 100,
+	maxRange = 64,
+	maxRangeAccuracy = 48,
 
-	minDamage = 9999998,
-	maxDamage = 9999999,
+	minDamage = 200,
+	maxDamage = 400,
 
-	attackSpeed = 1,
+	attackSpeed = 5,
 
-	woundsRatio = 95,
+	woundsRatio = 22,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},

@@ -100,26 +100,26 @@ object_weapon_ranged_pistol_pistol_intimidator_generic = object_weapon_ranged_pi
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 0,
-	actionAttackCost = 0,
-	mindAttackCost = 0,
+	healthAttackCost = 12,
+	actionAttackCost = 6,
+	mindAttackCost = 6,
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = 100,
+	pointBlankAccuracy = 15,
 
-	idealRange = 50,
-	idealAccuracy = 100,
+	idealRange = 30,
+	idealAccuracy = 55,
 
-	maxRange = 200,
-	maxRangeAccuracy = 100,
+	maxRange = 64,
+	maxRangeAccuracy = 9,
 
-	minDamage = 99999999998,
-	maxDamage = 99999999999,
+	minDamage = 90,
+	maxDamage = 225,
 
-	attackSpeed = 1,
+	attackSpeed = 2,
 
-	woundsRatio = 80,
+	woundsRatio = 20,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},
