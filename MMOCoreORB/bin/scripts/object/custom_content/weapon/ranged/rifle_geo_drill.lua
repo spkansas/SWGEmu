@@ -43,40 +43,8 @@
 
 object_weapon_ranged_rifle_rifle_geo_drill = object_weapon_ranged_rifle_shared_rifle_geo_drill:new {
 	
-	playerRaces = { 	"object/creature/player/smc_female.iff",
-				"object/creature/player/smc_male.iff",
-				"object/creature/player/talz_male.iff",
-				"object/creature/player/talz_female.iff",
-				"object/creature/player/togruta_female.iff",
-				"object/creature/player/togruta_male.iff",
-				"object/creature/player/weequay_male.iff",
-				"object/creature/player/weequay_female.iff",
-				"object/creature/player/nautolan_male.iff",
-				"object/creature/player/nautolan_female.iff",
-				"object/creature/player/nightsister_female.iff",
-				"object/creature/player/nightsister_male.iff",
-				"object/creature/player/nikto_male.iff",
-				"object/creature/player/nikto_female.iff",
-				"object/creature/player/quarren_male.iff",
-				"object/creature/player/quarren_female.iff",
-				"object/creature/player/ishi_tib_male.iff",
-				"object/creature/player/ishi_tib_female.iff",
-				"object/creature/player/hutt_female.iff",
-				"object/creature/player/hutt_male.iff",
-				"object/creature/player/gran_male.iff",
-				"object/creature/player/gran_female.iff",
-				"object/creature/player/gotal_male.iff",
-				"object/creature/player/gotal_female.iff",
-				"object/creature/player/aqualish_female.iff",
-				"object/creature/player/aqualish_male.iff",
-				"object/creature/player/bith_female.iff",
-				"object/creature/player/bith_male.iff",
-				"object/creature/player/chiss_female.iff",
-				"object/creature/player/chiss_male.iff",
-				"object/creature/player/devaronian_male.iff",
-				"object/creature/player/devaronian_female.iff",
+	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
-				"object/creature/player/bothan_male.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/ithorian_male.iff",
@@ -100,11 +68,11 @@ object_weapon_ranged_rifle_rifle_geo_drill = object_weapon_ranged_rifle_shared_r
 	-- HEAVYLIGHTNINGBEAMATTACK, HEAVYPARTICLEBEAMATTACK, HEAVYROCKETLAUNCHERATTACK, HEAVYLAUNCHERATTACK
 	attackType = RANGEDATTACK,
 
-	-- ENERGY, KINETIC, ELECTRICITY, STUN, BLAST, HEAT, COLD, ACID, LIGHTSABER
+	-- ENERGY, KINETIC, ELECTRICITY, STUN, BLAST, HEAT, COLD, ACID, FORCE, LIGHTSABER
 	damageType = ENERGY,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = HEAVY,
+	armorPiercing = NONE,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -112,8 +80,7 @@ object_weapon_ranged_rifle_rifle_geo_drill = object_weapon_ranged_rifle_shared_r
 	xpType = "combat_rangedspecialize_rifle",
 
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	-- Unsure of certification to use
-	certificationsRequired = { "cert_rifle_t21" },
+	certificationsRequired = { "cert_rifle_cdef" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "rifle_accuracy" },
 
@@ -133,35 +100,35 @@ object_weapon_ranged_rifle_rifle_geo_drill = object_weapon_ranged_rifle_shared_r
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 29,
-	actionAttackCost = 26,
-	mindAttackCost = 48,
+	healthAttackCost = 0,
+	actionAttackCost = 0,
+	mindAttackCost = 0,
 	forceCost = 0,
 
-	pointBlankAccuracy = -69,
 	pointBlankRange = 0,
+	pointBlankAccuracy = 100,
 
-	idealRange = 54,
-	idealAccuracy = 90,
+	idealRange = 50,
+	idealAccuracy = 100,
 
-	maxRange = 64,
-	maxRangeAccuracy = 15,
+	maxRange = 150,
+	maxRangeAccuracy = 100,
 
-	minDamage = 70,
-	maxDamage = 115,
+	minDamage = 9999998,
+	maxDamage = 9999999,
 
-	attackSpeed = 7.5,
+	attackSpeed = 1,
 
-	woundsRatio = 27,
+	woundsRatio = 95,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 40, 80, 9.5, 10, 30, 500, -40, 30, 54, 45, 40, 46, 75},
-	experimentalMax = {0, 0, 150, 340, 4.9, 45, 65, 1250, -80, 10, 54, 70, 18, 19, 26},
-	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+	experimentalMin = {0, 0, 17, 35, 4.6, 4, 5, 750, 0, -80, 35, 35, 10, 22, 10},
+	experimentalMax = {0, 0, 32, 65, 3.2, 5, 20, 1500, 0, -80, 35, 65, 7, 15, 7},
+	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
 

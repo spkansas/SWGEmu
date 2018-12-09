@@ -1191,57 +1191,20 @@ ObjectTemplates:addClientTemplate(object_weapon_ranged_rifle_shared_som_rifle_mu
 --**Post 14 Heavy Weapons
 --***********************
 --****************************************************************************************************************************************************************************
-object_weapon_ranged_heavy_shared_som_lava_cannon = SharedWeaponObjectTemplate:new {
-	clientTemplateFileName = "object/weapon/ranged/heavy/shared_som_lava_cannon.iff"
+object_weapon_ranged_heavy_shared_ep3_loot_corellian = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/ranged/heavy/shared_ep3_loot_corellian.iff"
 
 }
 
-ObjectTemplates:addClientTemplate(object_weapon_ranged_heavy_shared_som_lava_cannon, "object/weapon/ranged/heavy/shared_som_lava_cannon.iff")
+ObjectTemplates:addClientTemplate(object_weapon_ranged_heavy_shared_ep3_loot_corellian, "object/weapon/ranged/heavy/shared_ep3_loot_corellian.iff")
 --****************************************************************************************************************************************************************************
-object_weapon_ranged_heavy_shared_som_republic_flamer = SharedWeaponObjectTemplate:new {
-	clientTemplateFileName = "object/weapon/ranged/heavy/shared_som_republic_flamer.iff"
+object_weapon_ranged_heavy_shared_ep3_loot_void = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/ranged/heavy/shared_ep3_loot_void.iff"
 
 }
 
-ObjectTemplates:addClientTemplate(object_weapon_ranged_heavy_shared_som_republic_flamer, "object/weapon/ranged/heavy/shared_som_republic_flamer.iff")
+ObjectTemplates:addClientTemplate(object_weapon_ranged_heavy_shared_ep3_loot_void, "object/weapon/ranged/heavy/shared_ep3_loot_void.iff")
 --****************************************************************************************************************************************************************************
-object_weapon_ranged_heavy_shared_heavy_carbonite_rifle = SharedWeaponObjectTemplate:new {
-	clientTemplateFileName = "object/weapon/ranged/heavy/shared_heavy_carbonite_rifle.iff"
-
-}
-
-ObjectTemplates:addClientTemplate(object_weapon_ranged_heavy_shared_heavy_carbonite_rifle, "object/weapon/ranged/heavy/shared_heavy_carbonite_rifle.iff")
---****************************************************************************************************************************************************************************
-object_weapon_ranged_heavy_shared_heavy_cr1_blast_cannon = SharedWeaponObjectTemplate:new {
-	clientTemplateFileName = "object/weapon/ranged/heavy/shared_heavy_cr1_blast_cannon.iff"
-
-}
-
-ObjectTemplates:addClientTemplate(object_weapon_ranged_heavy_shared_heavy_cr1_blast_cannon, "object/weapon/ranged/heavy/shared_heavy_cr1_blast_cannon.iff")
---****************************************************************************************************************************************************************************
-object_weapon_ranged_heavy_shared_heavy_mandalorian = SharedWeaponObjectTemplate:new {
-	clientTemplateFileName = "object/weapon/ranged/heavy/shared_heavy_mandalorian.iff"
-
-}
-
-ObjectTemplates:addClientTemplate(object_weapon_ranged_heavy_shared_heavy_mandalorian, "object/weapon/ranged/heavy/shared_heavy_mandalorian.iff")
---****************************************************************************************************************************************************************************
-object_weapon_ranged_heavy_shared_heavy_rebel = SharedWeaponObjectTemplate:new {
-	clientTemplateFileName = "object/weapon/ranged/heavy/shared_heavy_rebel.iff"
-
-}
-
-ObjectTemplates:addClientTemplate(object_weapon_ranged_heavy_shared_heavy_rebel, "object/weapon/ranged/heavy/shared_heavy_rebel.iff")
---****************************************************************************************************************************************************************************
-object_weapon_ranged_heavy_shared_heavy_pvp = SharedWeaponObjectTemplate:new {
-	clientTemplateFileName = "object/weapon/ranged/heavy/shared_heavy_pvp.iff"
-
-}
-
-ObjectTemplates:addClientTemplate(object_weapon_ranged_heavy_shared_heavy_pvp, "object/weapon/ranged/heavy/shared_heavy_pvp.iff")
---****************************************************************************************************************************************************************************
-
-
 
 
 

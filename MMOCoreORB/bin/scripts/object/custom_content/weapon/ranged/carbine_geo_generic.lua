@@ -100,26 +100,26 @@ object_weapon_ranged_carbine_carbine_geo_generic = object_weapon_ranged_carbine_
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 9,
-	actionAttackCost = 15,
-	mindAttackCost = 9,
+	healthAttackCost = 0,
+	actionAttackCost = 0,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = 0,
+	pointBlankAccuracy = 100,
 
 	idealRange = 50,
-	idealAccuracy = 64,
+	idealAccuracy = 100,
 
-	maxRange = 64,
-	maxRangeAccuracy = 46,
+	maxRange = 200,
+	maxRangeAccuracy = 100,
 
-	minDamage = 125,
-	maxDamage = 225,
+	minDamage = 99998,
+	maxDamage = 99999,
 
-	attackSpeed = 2.7,
+	attackSpeed = 1,
 
-	woundsRatio = 15,
+	woundsRatio = 80,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},

@@ -34,23 +34,21 @@ object_weapon_melee_sword_sword_lightsaber_adeen = object_weapon_melee_sword_sha
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
 	-- combat_meleespecialize_twohandlightsaber, combat_meleespecialize_polearmlightsaber, combat_meleespecialize_onehandlightsaber
-	xpType = "combat_meleespecialize_onehand",
-
+	xpType = "jedi_general",
+	
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_sword_01" },
+	certificationsRequired = { "cert_onehandlightsaber_gen4" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
-	creatureAccuracyModifiers = { "onehandmelee_accuracy" },
+	creatureAccuracyModifiers = { "onehandlightsaber_accuracy" },
 
 	-- See http://www.ocdsoft.com/files/defense.xls
 	defenderDefenseModifiers = { "melee_defense" },
 
 	-- Leave as "dodge" for now, may have additions later
-	defenderSecondaryDefenseModifiers = { "dodge" },
-
-	defenderToughnessModifiers = { "onehandmelee_toughness" },
+	defenderSecondaryDefenseModifiers = { "saber_block" },
 
 	-- See http://www.ocdsoft.com/files/speed.xls
-	speedModifiers = { "onehandmelee_speed" },
+	speedModifiers = { "onehandlightsaber_speed" },
 
 	-- Leave blank for now
 	damageModifiers = { },
@@ -77,6 +75,12 @@ object_weapon_melee_sword_sword_lightsaber_adeen = object_weapon_melee_sword_sha
 	attackSpeed = 3.5,
 
 	woundsRatio = 14,
+
+	noTrade = 1,
+	
+	childObjects = {
+		{templateFile = "object/tangible/inventory/lightsaber_inventory_4.iff", x = 0, z = 0, y = 0, ox = 0, oy = 0, oz = 0, ow = 0, cellid = -1, containmentType = 4}
+	},
 
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalProperties = {"XX", "XX", "SR", "SR", "SR", "SR", "SR", "SR", "SR", "XX", "SR", "XX", "SR", "SR", "SR"},

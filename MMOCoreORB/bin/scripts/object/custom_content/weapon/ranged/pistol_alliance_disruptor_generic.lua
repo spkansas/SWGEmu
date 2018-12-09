@@ -101,26 +101,26 @@ object_weapon_ranged_pistol_pistol_alliance_disruptor_generic = object_weapon_ra
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 12,
-	actionAttackCost = 6,
-	mindAttackCost = 6,
+	healthAttackCost = 10,
+	actionAttackCost = 15,
+	mindAttackCost = 10,
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = 15,
+	pointBlankAccuracy = 20,
 
-	idealRange = 30,
-	idealAccuracy = 55,
+	idealRange = 15,
+	idealAccuracy = 50,
 
 	maxRange = 64,
-	maxRangeAccuracy = 9,
+	maxRangeAccuracy = -80,
 
-	minDamage = 90,
-	maxDamage = 225,
+	minDamage = 25,
+	maxDamage = 50,
 
-	attackSpeed = 2,
+	attackSpeed = 3.5,
 
-	woundsRatio = 20,
+	woundsRatio = 4,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},

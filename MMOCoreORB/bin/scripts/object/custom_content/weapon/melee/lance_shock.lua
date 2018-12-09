@@ -43,40 +43,8 @@
 
 object_weapon_melee_polearm_lance_shock = object_weapon_melee_polearm_shared_lance_shock:new {
 
-	playerRaces = { 	"object/creature/player/smc_female.iff",
-				"object/creature/player/smc_male.iff",
-				"object/creature/player/talz_male.iff",
-				"object/creature/player/talz_female.iff",
-				"object/creature/player/togruta_female.iff",
-				"object/creature/player/togruta_male.iff",
-				"object/creature/player/weequay_male.iff",
-				"object/creature/player/weequay_female.iff",
-				"object/creature/player/nautolan_male.iff",
-				"object/creature/player/nautolan_female.iff",
-				"object/creature/player/nightsister_female.iff",
-				"object/creature/player/nightsister_male.iff",
-				"object/creature/player/nikto_male.iff",
-				"object/creature/player/nikto_female.iff",
-				"object/creature/player/quarren_male.iff",
-				"object/creature/player/quarren_female.iff",
-				"object/creature/player/ishi_tib_male.iff",
-				"object/creature/player/ishi_tib_female.iff",
-				"object/creature/player/hutt_female.iff",
-				"object/creature/player/hutt_male.iff",
-				"object/creature/player/gran_male.iff",
-				"object/creature/player/gran_female.iff",
-				"object/creature/player/gotal_male.iff",
-				"object/creature/player/gotal_female.iff",
-				"object/creature/player/aqualish_female.iff",
-				"object/creature/player/aqualish_male.iff",
-				"object/creature/player/bith_female.iff",
-				"object/creature/player/bith_male.iff",
-				"object/creature/player/chiss_female.iff",
-				"object/creature/player/chiss_male.iff",
-				"object/creature/player/devaronian_male.iff",
-				"object/creature/player/devaronian_female.iff",
+	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
-				"object/creature/player/bothan_male.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/ithorian_male.iff",
@@ -101,10 +69,10 @@ object_weapon_melee_polearm_lance_shock = object_weapon_melee_polearm_shared_lan
 	attackType = MELEEATTACK,
 
 	-- ENERGY, KINETIC, ELECTRICITY, STUN, BLAST, HEAT, COLD, ACID, FORCE, LIGHTSABER
-	damageType = STUN,
+	damageType = KINETIC,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = LIGHT,
+	armorPiercing = MEDIUM,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -138,10 +106,10 @@ object_weapon_melee_polearm_lance_shock = object_weapon_melee_polearm_shared_lan
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = 0,
+	pointBlankAccuracy = -45,
 
 	idealRange = 5,
-	idealAccuracy = 5,
+	idealAccuracy = -45,
 
 	maxRange = 7,
 	maxRangeAccuracy = -45,
@@ -149,7 +117,7 @@ object_weapon_melee_polearm_lance_shock = object_weapon_melee_polearm_shared_lan
 	minDamage = 100,
 	maxDamage = 375,
 
-	attackSpeed = 4.7,
+	attackSpeed = 5,
 
 	woundsRatio = 33,
 

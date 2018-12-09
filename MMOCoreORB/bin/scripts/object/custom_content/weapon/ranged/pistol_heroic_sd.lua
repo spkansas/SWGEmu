@@ -44,40 +44,8 @@
 object_weapon_ranged_pistol_pistol_heroic_sd = object_weapon_ranged_pistol_shared_pistol_heroic_sd:new {
 
 
-	playerRaces = { 	"object/creature/player/smc_female.iff",
-				"object/creature/player/smc_male.iff",
-				"object/creature/player/talz_male.iff",
-				"object/creature/player/talz_female.iff",
-				"object/creature/player/togruta_female.iff",
-				"object/creature/player/togruta_male.iff",
-				"object/creature/player/weequay_male.iff",
-				"object/creature/player/weequay_female.iff",
-				"object/creature/player/nautolan_male.iff",
-				"object/creature/player/nautolan_female.iff",
-				"object/creature/player/nightsister_female.iff",
-				"object/creature/player/nightsister_male.iff",
-				"object/creature/player/nikto_male.iff",
-				"object/creature/player/nikto_female.iff",
-				"object/creature/player/quarren_male.iff",
-				"object/creature/player/quarren_female.iff",
-				"object/creature/player/ishi_tib_male.iff",
-				"object/creature/player/ishi_tib_female.iff",
-				"object/creature/player/hutt_female.iff",
-				"object/creature/player/hutt_male.iff",
-				"object/creature/player/gran_male.iff",
-				"object/creature/player/gran_female.iff",
-				"object/creature/player/gotal_male.iff",
-				"object/creature/player/gotal_female.iff",
-				"object/creature/player/aqualish_female.iff",
-				"object/creature/player/aqualish_male.iff",
-				"object/creature/player/bith_female.iff",
-				"object/creature/player/bith_male.iff",
-				"object/creature/player/chiss_female.iff",
-				"object/creature/player/chiss_male.iff",
-				"object/creature/player/devaronian_male.iff",
-				"object/creature/player/devaronian_female.iff",
+	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
-				"object/creature/player/bothan_male.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/ithorian_male.iff",
@@ -113,7 +81,7 @@ object_weapon_ranged_pistol_pistol_heroic_sd = object_weapon_ranged_pistol_share
 	xpType = "combat_rangedspecialize_pistol",
 
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "doubleTap" },
+	certificationsRequired = { "cert_pistol_cdef" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "pistol_accuracy" },
 
@@ -133,26 +101,26 @@ object_weapon_ranged_pistol_pistol_heroic_sd = object_weapon_ranged_pistol_share
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 12,
-	actionAttackCost = 6,
-	mindAttackCost = 6,
+	healthAttackCost = 10,
+	actionAttackCost = 15,
+	mindAttackCost = 10,
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = 15,
+	pointBlankAccuracy = 20,
 
-	idealRange = 30,
-	idealAccuracy = 55,
+	idealRange = 15,
+	idealAccuracy = 50,
 
 	maxRange = 64,
-	maxRangeAccuracy = 9,
+	maxRangeAccuracy = -80,
 
-	minDamage = 90,
-	maxDamage = 225,
+	minDamage = 25,
+	maxDamage = 50,
 
-	attackSpeed = 2,
+	attackSpeed = 3.5,
 
-	woundsRatio = 20,
+	woundsRatio = 4,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},
