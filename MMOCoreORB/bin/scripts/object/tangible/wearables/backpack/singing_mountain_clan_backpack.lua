@@ -42,7 +42,7 @@
 
 
 object_tangible_wearables_backpack_singing_mountain_clan_backpack = object_tangible_wearables_backpack_shared_singing_mountain_clan_backpack:new {
-	playerRaces = playerRaces = { "object/creature/player/aqualish_male.iff",
+	playerRaces = { "object/creature/player/aqualish_male.iff",
 				"object/creature/player/bith_female.iff",
 				"object/creature/player/bith_male.iff",
 				"object/creature/player/chiss_female.iff",
