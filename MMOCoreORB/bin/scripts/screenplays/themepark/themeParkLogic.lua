@@ -25,13 +25,13 @@ function ThemeParkLogic:start()
 	if (self.requiredPlanets ~= nil and #self.requiredPlanets > 0) then
 		for i = 1, #self.requiredPlanets, 1 do
 			if not isZoneEnabled(self.requiredPlanets[i]) then
-				printf("ERROR: Unable to load screenplay " .. self.className .. ", zone " .. self.requiredPlanets[i] .. " is not enabled.\n")
+				--printf("ERROR: Unable to load screenplay " .. self.className .. ", zone " .. self.requiredPlanets[i] .. " is not enabled.\n")
 				return
 			end
 		end
 	else
 		if not isZoneEnabled(self.planetName) and not self.genericGiver then
-			printf("ERROR: Unable to load screenplay " .. self.className .. ", zone " .. self.planetName .. " is not enabled.\n")
+			--printf("ERROR: Unable to load screenplay " .. self.className .. ", zone " .. self.planetName .. " is not enabled.\n")
 			return
 		end
 	end
@@ -482,6 +482,10 @@ function ThemeParkLogic:handleMissionAccept(npcNumber, missionNumber, pConversin
 	if mission.missionType == "hunt" then
 		return self:handleHuntMissionAccept(mission, pConversingPlayer, missionNumber)
 	end
+	
+	if mission.missionType == "huntmulti" then
+		return self:handleHuntMultiMissionAccept(mission, pConversingPlayer, missionNumber)
+	end
 
 	local zoneName = self.planetName
 
@@ -694,6 +698,19 @@ function ThemeParkLogic:handleHuntMissionAccept(mission, pConversingPlayer, miss
 	end
 end
 
+function ThemeParkLogic:handleHuntMultiMissionAccept(mission, pConversingPlayer, missionNumber)
+	if (pConversingPlayer == nil) then
+		return false
+	end
+
+	if self:startHuntMultiMission(mission, pConversingPlayer) then
+		self:writeData(pConversingPlayer, ":activeMission", 1)
+		return true
+	else
+		return false
+	end
+end
+
 function ThemeParkLogic:handleConfiscateMissionSpawn(mission, pConversingPlayer, missionNumber, pActiveArea)
 	if (pConversingPlayer == nil) or (pActiveArea == nil) then
 		return false
@@ -806,6 +823,79 @@ function ThemeParkLogic:notifyKilledHuntTarget(pAttacker, pVictim)
 		self:completeMission(pAttacker)
 		return 1
 	end
+	return 0
+end
+
+function ThemeParkLogic:startHuntMultiMission(mission, pConversingPlayer)
+	if (pConversingPlayer == nil) then
+		return false
+	end
+
+	local planetName = self.planetName
+
+	local huntMultiTarget = mission.huntMultiTarget
+
+	local huntMultiGoal = mission.huntMultiGoal
+
+	if (mission.planetName ~= nil and mission.planetName ~= "") then
+		planetName = mission.planetName
+	end
+
+	writeScreenPlayData(pConversingPlayer, self.className, "huntMultiTarget", huntMultiTarget)
+	writeScreenPlayData(pConversingPlayer, self.className, "huntMultiGoal", huntMultiGoal)
+	writeScreenPlayData(pConversingPlayer, self.className, "huntMultiTargetCount", 0)
+	
+	dropObserver(KILLEDCREATURE, self.className, "notifyKilledHuntMultiTarget", pConversingPlayer)
+	createObserver(KILLEDCREATURE, self.className, "notifyKilledHuntMultiTarget", pConversingPlayer)
+
+	return true
+end
+
+function ThemeParkLogic:notifyKilledHuntMultiTarget(pConversingPlayer, pVictim)
+	if (pVictim == nil) or (pConversingPlayer == nil) then
+		return 0
+	end
+	
+	local npcNumber = self:getActiveNpcNumber(pConversingPlayer)
+	local missionNumber = self:getCurrentMissionNumber(npcNumber, pConversingPlayer)
+	local mission = self:getMission(npcNumber, missionNumber)
+	local huntMultiTarget = readScreenPlayData(pConversingPlayer, self.className, "huntMultiTarget")
+	local huntMultiTargetCount = tonumber(readScreenPlayData(pConversingPlayer, self.className, "huntMultiTargetCount"))
+	local huntMultiGoal = tonumber(readScreenPlayData(pConversingPlayer, self.className, "huntMultiGoal"))
+
+	if (huntMultiTargetCount == nil) then
+		printLuaError(self.className .. " :notifyKilledHuntMultiTarget, nil huntMultiTargetCount for player: " .. SceneObject(pConversingPlayer):getCustomObjectName())
+		return 1
+	end
+
+	if (huntMultiGoal == nil) then
+		printLuaError(self.className .. " :notifyKilledHuntMultiTarget, nil huntMultiGoal for player: " .. SceneObject(pConversingPlayer):getCustomObjectName())
+		return 1
+	end
+
+	if (SceneObject(pVictim):getZoneName() ~= SceneObject(pConversingPlayer):getZoneName() or not CreatureObject(pConversingPlayer):isInRangeWithObject(pVictim, 80)) then
+		return 0
+	end
+	
+
+	if (string.find(SceneObject(pVictim):getObjectName(), huntMultiTarget)) then
+	
+	huntMultiTargetCount = huntMultiTargetCount + 1
+	
+	CreatureObject(pConversingPlayer):sendSystemMessage("You have killed " .. huntMultiTargetCount .. " of " .. huntMultiGoal .. " " .. huntMultiTarget .. "s")
+	CreatureObject(pConversingPlayer):playMusicMessage("sound/ui_npe2_quest_counter.snd")
+	
+	writeScreenPlayData(pConversingPlayer, self.className, "huntMultiTargetCount", huntMultiTargetCount)
+
+		if (huntMultiTargetCount >= huntMultiGoal) then
+		
+			CreatureObject(pConversingPlayer):playMusicMessage("sound/ui_npe2_quest_completed.snd")
+			self:completeMission(pConversingPlayer)
+
+			return 1
+		end
+	end
+
 	return 0
 end
 

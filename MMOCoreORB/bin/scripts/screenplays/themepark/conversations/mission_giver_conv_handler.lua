@@ -38,6 +38,14 @@ function mission_giver_conv_handler:runScreenHandlers(pConvTemplate, pPlayer, pN
 		pConvScreen = self:handleScreenNpc5(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
 	elseif screenID == "npc_6_n" then
 		pConvScreen = self:handleScreenNpc6(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	elseif screenID == "npc_7_n" then
+		pConvScreen = self:handleScreenNpc7(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	elseif screenID == "npc_8_n" then
+		pConvScreen = self:handleScreenNpc8(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	elseif screenID == "npc_9_n" then
+		pConvScreen = self:handleScreenNpc9(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	elseif screenID == "npc_10_n" then
+		pConvScreen = self:handleScreenNpc10(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
 	elseif screenID == "npc_work_n" then
 		pConvScreen = self:handleScreenWork(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
 	elseif screenID == "notit_n" then
@@ -260,21 +268,17 @@ function mission_giver_conv_handler:handleScreenNpc1(pConvTemplate, pPlayer, pNp
 	clonedScreen:setDialogTextStringId(stfFile .. ":npc_1_" .. missionNumber)
 
 	clonedScreen:removeAllOptions()
-
-	clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
-	clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
-
+	
 	if (self.themePark:isValidConvoString(stfFile, ":player_3_" .. missionNumber)) then
-		clonedScreen:addOption(stfFile .. ":player_3_" .. missionNumber, "npc_4_n")
+	clonedScreen:addOption(stfFile .. ":player_3_" .. missionNumber, "npc_4_n")
 
-		if (self.themePark:isValidConvoString(stfFile, ":player_4_" .. missionNumber)) then
-			clonedScreen:addOption(stfFile .. ":player_4_" .. missionNumber, "npc_5_n")
-
-			if (self.themePark:isValidConvoString(stfFile, ":player_5_" .. missionNumber)) then
-				clonedScreen:addOption(stfFile .. ":player_5_" .. missionNumber, "npc_6_n")
-			end
-		end
+	else
+	
+		clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
+		clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
+	
 	end
+
 
 	return pConvScreen
 end
@@ -320,15 +324,14 @@ function mission_giver_conv_handler:handleScreenNpc4(pConvTemplate, pPlayer, pNp
 
 	clonedScreen:removeAllOptions()
 
-	clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
-	clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
+
 
 	if (self.themePark:isValidConvoString(stfFile, ":player_4_" .. missionNumber)) then
 		clonedScreen:addOption(stfFile .. ":player_4_" .. missionNumber, "npc_5_n")
 
-		if (self.themePark:isValidConvoString(stfFile, ":player_5_" .. missionNumber)) then
-			clonedScreen:addOption(stfFile .. ":player_5_" .. missionNumber, "npc_6_n")
-		end
+	else
+		clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
+		clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
 	end
 
 	return pConvScreen
@@ -347,12 +350,12 @@ function mission_giver_conv_handler:handleScreenNpc5(pConvTemplate, pPlayer, pNp
 
 	clonedScreen:removeAllOptions()
 
-	clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
-	clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
-	clonedScreen:addOption(stfFile .. ":player_3_" .. missionNumber, "npc_4_n")
-
 	if (self.themePark:isValidConvoString(stfFile, ":player_5_" .. missionNumber)) then
 		clonedScreen:addOption(stfFile .. ":player_5_" .. missionNumber, "npc_6_n")
+		
+	else
+		clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
+		clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
 	end
 
 	return pConvScreen
@@ -371,10 +374,105 @@ function mission_giver_conv_handler:handleScreenNpc6(pConvTemplate, pPlayer, pNp
 
 	clonedScreen:removeAllOptions()
 
-	clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
-	clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
-	clonedScreen:addOption(stfFile .. ":player_3_" .. missionNumber, "npc_4_n")
-	clonedScreen:addOption(stfFile .. ":player_4_" .. missionNumber, "npc_5_n")
+	if (self.themePark:isValidConvoString(stfFile, ":player_6_" .. missionNumber)) then
+		clonedScreen:addOption(stfFile .. ":player_6_" .. missionNumber, "npc_7_n")
+	
+	else
+		clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
+		clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
+	end
+
+	return pConvScreen
+end
+
+function mission_giver_conv_handler:handleScreenNpc7(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local screen = LuaConversationScreen(pConvScreen)
+	pConvScreen = screen:cloneScreen()
+	local clonedScreen = LuaConversationScreen(pConvScreen)
+
+	local npcNumber = self.themePark:getNpcNumber(pNpc)
+	local missionNumber = self.themePark:getCurrentMissionNumber(npcNumber, pPlayer)
+	local stfFile = self.themePark:getStfFile(npcNumber)
+
+	clonedScreen:setDialogTextStringId(stfFile .. ":npc_7_" .. missionNumber)
+
+	clonedScreen:removeAllOptions()
+
+		if (self.themePark:isValidConvoString(stfFile, ":player_7_" .. missionNumber)) then
+		clonedScreen:addOption(stfFile .. ":player_7_" .. missionNumber, "npc_8_n")
+		
+	else
+		clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
+		clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
+	end
+
+	return pConvScreen
+end
+
+function mission_giver_conv_handler:handleScreenNpc8(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local screen = LuaConversationScreen(pConvScreen)
+	pConvScreen = screen:cloneScreen()
+	local clonedScreen = LuaConversationScreen(pConvScreen)
+
+	local npcNumber = self.themePark:getNpcNumber(pNpc)
+	local missionNumber = self.themePark:getCurrentMissionNumber(npcNumber, pPlayer)
+	local stfFile = self.themePark:getStfFile(npcNumber)
+
+	clonedScreen:setDialogTextStringId(stfFile .. ":npc_8_" .. missionNumber)
+
+	clonedScreen:removeAllOptions()
+
+	if (self.themePark:isValidConvoString(stfFile, ":player_8_" .. missionNumber)) then
+		clonedScreen:addOption(stfFile .. ":player_8_" .. missionNumber, "npc_9_n")
+	else
+		clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
+		clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
+	end
+
+	return pConvScreen
+end
+
+function mission_giver_conv_handler:handleScreenNpc9(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local screen = LuaConversationScreen(pConvScreen)
+	pConvScreen = screen:cloneScreen()
+	local clonedScreen = LuaConversationScreen(pConvScreen)
+
+	local npcNumber = self.themePark:getNpcNumber(pNpc)
+	local missionNumber = self.themePark:getCurrentMissionNumber(npcNumber, pPlayer)
+	local stfFile = self.themePark:getStfFile(npcNumber)
+
+	clonedScreen:setDialogTextStringId(stfFile .. ":npc_9_" .. missionNumber)
+
+	clonedScreen:removeAllOptions()
+
+	if (self.themePark:isValidConvoString(stfFile, ":player_9_" .. missionNumber)) then
+		clonedScreen:addOption(stfFile .. ":player_9_" .. missionNumber, "npc_10_n")
+	else
+		clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
+		clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
+	end
+
+	return pConvScreen
+end
+
+function mission_giver_conv_handler:handleScreenNpc10(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local screen = LuaConversationScreen(pConvScreen)
+	pConvScreen = screen:cloneScreen()
+	local clonedScreen = LuaConversationScreen(pConvScreen)
+
+	local npcNumber = self.themePark:getNpcNumber(pNpc)
+	local missionNumber = self.themePark:getCurrentMissionNumber(npcNumber, pPlayer)
+	local stfFile = self.themePark:getStfFile(npcNumber)
+
+	clonedScreen:setDialogTextStringId(stfFile .. ":npc_10_" .. missionNumber)
+
+	clonedScreen:removeAllOptions()
+
+	if (self.themePark:isValidConvoString(stfFile, ":player_10_" .. missionNumber)) then
+		clonedScreen:addOption(stfFile .. ":player_1_" .. missionNumber, "accept")
+		clonedScreen:addOption(stfFile .. ":player_2_" .. missionNumber, "npc_3_n")
+
+	end
 
 	return pConvScreen
 end
