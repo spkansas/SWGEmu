@@ -296,7 +296,7 @@ void ZoneServerImplementation::timedShutdown(int minutes) {
 	} else {
 		task->schedule(60 * 1000);
 
-		String str = "Server will shutdown in " + String::valueOf(minutes) + " minutes";
+		String str = "Server will shutdown in " + String::valueOf(minutes) + " minutes. Please find a safe place to log out.";
 		Logger::console.info(str, true);
 
 		getChatManager()->broadcastGalaxy(NULL, str);

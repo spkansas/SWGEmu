@@ -24,10 +24,10 @@ public:
 	void run() {
 		--minutesRemaining;
 
-		String str = "Server will shutdown in " + String::valueOf(minutesRemaining) + " minutes";
+		String str = "Server will be shutting down in " + String::valueOf(minutesRemaining) + " minutes. Please find a safe place to log out.";
 
 		if (minutesRemaining <= 0)
-			str = "SHUTTING DOWN NOW!";
+			str = "You will now be disconnected so the server can perform a final save before shutdown.";
 
 		Logger::console.info(str, true);
 
