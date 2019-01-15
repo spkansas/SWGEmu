@@ -1858,6 +1858,22 @@ class CreatureObject extends TangibleObject {
 			return "ithorian";
 		else if(species == 0x31)
 			return "sullustan";
+		else if(species == 9)
+			return "aqualish";
+		else if(species == 0x0c)
+			return "bith";
+		else if(species == 0xe8)
+			return "chiss";
+		else if(species == 0x11)
+			return "devaronian";
+		else if(species == 0x1b)
+			return "gotal";
+		else if(species == 0x1c)
+			return "gran";
+		else if(species == 0x1f)
+			return "hutt";
+		else if(species == 0x20)
+			return "ishi_tib";
 		else
 			return "";
 	}
