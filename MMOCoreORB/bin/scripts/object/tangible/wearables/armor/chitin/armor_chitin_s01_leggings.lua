@@ -43,7 +43,7 @@
 
 object_tangible_wearables_armor_chitin_armor_chitin_s01_leggings = object_tangible_wearables_armor_chitin_shared_armor_chitin_s01_leggings:new {
 	templateType = ARMOROBJECT,
-
+    objectMenuComponent = "ArmorObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

@@ -43,7 +43,7 @@
 
 object_tangible_wearables_armor_ris_armor_ris_bracer_l = object_tangible_wearables_armor_ris_shared_armor_ris_bracer_l:new {
 	templateType = ARMOROBJECT,
-
+    objectMenuComponent = "ArmorObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

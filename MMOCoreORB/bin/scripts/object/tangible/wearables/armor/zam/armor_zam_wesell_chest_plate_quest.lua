@@ -43,7 +43,7 @@
 
 object_tangible_wearables_armor_zam_armor_zam_wesell_chest_plate_quest = object_tangible_wearables_armor_zam_shared_armor_zam_wesell_chest_plate_quest:new {
 	templateType = ARMOROBJECT,
-
+    objectMenuComponent = "ArmorObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

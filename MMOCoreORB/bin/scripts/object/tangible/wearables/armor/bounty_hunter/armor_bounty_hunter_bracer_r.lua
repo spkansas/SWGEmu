@@ -43,7 +43,7 @@
 
 object_tangible_wearables_armor_bounty_hunter_armor_bounty_hunter_bracer_r = object_tangible_wearables_armor_bounty_hunter_shared_armor_bounty_hunter_bracer_r:new {
 	templateType = ARMOROBJECT,
-
+    objectMenuComponent = "ArmorObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

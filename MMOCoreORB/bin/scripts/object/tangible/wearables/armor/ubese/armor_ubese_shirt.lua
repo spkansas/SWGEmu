@@ -43,7 +43,7 @@
 
 object_tangible_wearables_armor_ubese_armor_ubese_shirt = object_tangible_wearables_armor_ubese_shared_armor_ubese_shirt:new {
 	templateType = ARMOROBJECT,
-
+    objectMenuComponent = "ArmorObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

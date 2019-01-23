@@ -43,7 +43,7 @@
 
 object_tangible_wearables_armor_marauder_armor_marauder_s01_gloves = object_tangible_wearables_armor_marauder_shared_armor_marauder_s01_gloves:new {
 	templateType = ARMOROBJECT,
-
+    objectMenuComponent = "ArmorObjectMenuComponent",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
 			"object/creature/player/aqualish_male.iff",

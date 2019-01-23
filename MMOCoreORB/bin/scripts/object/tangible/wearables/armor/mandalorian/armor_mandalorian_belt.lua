@@ -43,7 +43,7 @@
 
 object_tangible_wearables_armor_mandalorian_armor_mandalorian_belt = object_tangible_wearables_armor_mandalorian_shared_armor_mandalorian_belt:new {
 	templateType = ARMOROBJECT,
-
+    objectMenuComponent = "ArmorObjectMenuComponent",
 
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",

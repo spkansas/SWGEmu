@@ -43,7 +43,7 @@
 
 object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_bicep_r = object_tangible_wearables_armor_stormtrooper_shared_armor_stormtrooper_bicep_r:new {
 	templateType = ARMOROBJECT,
-
+    objectMenuComponent = "ArmorObjectMenuComponent",
 	faction = "Imperial",
 
 	playerRaces = {

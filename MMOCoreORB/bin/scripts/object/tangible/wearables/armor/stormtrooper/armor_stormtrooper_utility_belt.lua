@@ -42,7 +42,8 @@
 
 
 object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_utility_belt = object_tangible_wearables_armor_stormtrooper_shared_armor_stormtrooper_utility_belt:new {
-	templateType = CLOTHINGOBJECT,
+	templateType = ARMOROBJECT,
+	objectMenuComponent = "ArmorObjectMenuComponent",
 	faction = "Imperial",
 	playerRaces = {
 			"object/creature/player/aqualish_female.iff",
