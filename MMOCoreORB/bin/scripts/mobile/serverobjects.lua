@@ -4,6 +4,9 @@ includeFile("../custom_scripts/mobile/serverobjects.lua")
 -- Conversations
 includeFile("conversations.lua")
 
+-- Dress Groups - Must be loaded before mobiles
+includeFile("dressgroup/serverobjects.lua")
+
 --New Content
 includeFile("custom_content/serverobjects.lua")
 
