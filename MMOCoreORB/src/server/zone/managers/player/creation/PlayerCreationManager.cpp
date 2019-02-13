@@ -603,20 +603,24 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 	//Join auction chat room
 	ghost->addChatRoom(chatManager->getAuctionRoom()->getRoomID());
 
+	//Send Sui to player with server information
 	ManagedReference<SuiMessageBox*> box = new SuiMessageBox(playerCreature, SuiWindowType::NONE);
+	int playercount = zoneServer->getConnectionCount();
+  	String playerName = playerCreature->getFirstName();
 	box->setPromptTitle("PLEASE NOTE");
-	box->setPromptText("Welcome to the MtG public server You are limited to creating one character per hour. Attempting to create another character or deleting your character before the 1 hour timer expires will reset the timer.");
-	
-     //Broadcast to Server
-	String playerName = playerCreature->getFirstName();
-	StringBuffer zBroadcast;
-	zBroadcast << "\\#00ace6" << playerName << " \\#ffb90f Has Joined MtG-Public-Server!";
-	playerCreature->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
+  	StringBuffer promptText;
+    	promptText << "\\#ffffff Welcome to the MtG public server: \\#00ff00" << playerName << "\\#ffffff There is currently: \\#00ff00" << playercount << "\\#ffffff players logged in out of\\#00ff00 3000.\\#ffffff You are limited to creating one character per hour. Attempting to create another character or deleting your character before the 1 hour timer expires will reset the timer.";
+  	box->setPromptText(promptText.toString());
+ 	box->setCancelButton(true, "@no");
+	box->setOkButton(true, "@yes");
+	box->setUsingObject(ghost);
 	ghost->addSuiBox(box);
-	playerCreature->sendMessage(box->generateMessage());
+	ghost->sendMessage(box->generateMessage());	
 
-	ghost->addSuiBox(box);
-	playerCreature->sendMessage(box->generateMessage());
+	//Broadcast Server wide message, new player has joined the server
+	StringBuffer zBroadcast;
+    	zBroadcast << "\\#00ace6" << playerName << " \\#ffb90f Has Joined MtG-Public-Server!";
+	playerCreature->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
 
 	return true;
 }
