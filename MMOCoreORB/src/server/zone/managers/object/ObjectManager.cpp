@@ -31,16 +31,13 @@ using namespace engine::db;
 uint32 ObjectManager::serverObjectCrcHashCode = STRING_HASHCODE("SceneObject.serverObjectCRC");
 uint32 ObjectManager::_classNameHashCode = STRING_HASHCODE("_className");
 
-ObjectManager::ObjectManager() : DOBObjectManager() {
+ObjectManager::ObjectManager(bool initializeTemplates) : DOBObjectManager() {
 	server = NULL;
 
 	deleteCharactersTask = new DeleteCharactersTask();
 
 	databaseManager = ObjectDatabaseManager::instance();
 	databaseManager->loadDatabases(ServerCore::truncateDatabases());
-
-	templateManager = TemplateManager::instance();
-	templateManager->loadLuaTemplates();
 
 	registerObjectTypes();
 
@@ -64,15 +61,25 @@ ObjectManager::ObjectManager() : DOBObjectManager() {
 	databaseManager->loadObjectDatabase("navareas", true, 0xFFFF, false);
 	databaseManager->loadObjectDatabase("frsdata", true);
 	databaseManager->loadObjectDatabase("frsmanager", true);
+	databaseManager->loadObjectDatabase("resourcespawns", true);
+	databaseManager->loadObjectDatabase("playerbounties", true);
+	databaseManager->loadObjectDatabase("mail", true);
+	databaseManager->loadObjectDatabase("chatrooms", true);
 
 	ObjectDatabaseManager::instance()->commitLocalTransaction();
 
+	Core::getTaskManager()->initalizeDatabaseHandles();
 	Core::getTaskManager()->initializeCustomQueue("slowQueue", SLOW_QUEUES_COUNT, true);
 
 	loadLastUsedObjectID();
 
 	setLogging(false);
 	setGlobalLogging(true);
+
+	if (initializeTemplates) {
+		templateManager = TemplateManager::instance();
+		templateManager->loadLuaTemplates();
+	}
 }
 
 ObjectManager::~ObjectManager() {
