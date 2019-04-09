@@ -4097,9 +4097,6 @@ void FrsManagerImplementation::handleSuddenDeathLoss(CreatureObject* player, Thr
 	player->sendSystemMessage("@pvp_rating:dark_jedi_kill_lost_votes"); // 	For dying to another petitioning Jedi, you have lost all of your votes. You have also relinquished your rights to petition during the current voting period.
 	rankData->removeFromPetitionerList(playerID);
 	modifySuddenDeathFlags(player, rankData, true);
-
-}
-
 }
 
 ZoneServer* FrsManagerImplementation::getZoneServer() {
