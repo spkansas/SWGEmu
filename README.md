@@ -8,6 +8,9 @@ If you wish to submit work for inclusion in this repo, please do so via the MTG 
 
 The complete set of consolidated tre files are [**here.**](https://mega.nz/#F!fw0EzZ4I!RfRwyqE859Ad3kGlQv7T4Q) These contain all the usual Pre-CU assets plus everything that has been added so far.
 
+mtg_patch_023.tre is available [**here.**](https://drive.google.com/open?id=1_52Y5wp6RHhXnnCzI9TgGflsj9lBIFtw)
+
+
 * All standard Pre-CU assets
 * All post 14.1 Weapons
 * CU Armor - Katarn, Rebel Assault/Battle, Imperial Assualt & Scout Troopers
