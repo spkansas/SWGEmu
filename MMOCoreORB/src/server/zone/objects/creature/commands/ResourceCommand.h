@@ -56,6 +56,9 @@ public:
 			} else if(command == "create") {
 				giveResource(creature, &args);
 
+			} else if(command == "ghdump") {
+				ghDump(creature, &args);
+
 			} else {
 				throw Exception();
 			}
@@ -64,6 +67,7 @@ public:
 			creature->sendSystemMessage("invalid arguments for resources command:  /resource <option> [params]");
 			creature->sendSystemMessage("		list <planet> : Lists resources on specified planet");
 			creature->sendSystemMessage("		info <resource name> : Lists Info about a specific resource");
+			creature->sendSystemMessage("           ghdump : Updates the Galaxy Harvester output file");			
 			creature->sendSystemMessage("		find <class> <attribute> <gt|lt> <value> [<and|or> <attribute> <gt|lt> <value> [...]]");
 			creature->sendSystemMessage("		create <name> [quantity] : Spawns resource in inventory");
 		}
@@ -93,6 +97,15 @@ public:
 		ResourceManager* resMan = creature->getZoneServer()->getResourceManager();
 
 		creature->sendSystemMessage(resMan->healthCheck());
+	}
+
+	void ghDump(CreatureObject* creature, StringTokenizer* args) const {
+		if(creature->getZoneServer() == NULL)
+			return;
+
+  		ResourceManager* resMan = creature->getZoneServer()->getResourceManager();
+
+  		creature->sendSystemMessage(resMan->ghDump());
 	}
 
 	void dumpResources(CreatureObject* creature, StringTokenizer* args) const {
