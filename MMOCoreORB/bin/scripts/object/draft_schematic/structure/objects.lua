@@ -2637,3 +2637,39 @@ object_draft_schematic_structure_shared_tatooine_house_guild_hall_style_02 = Sha
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_structure_shared_tatooine_house_guild_hall_style_02, "object/draft_schematic/structure/shared_tatooine_house_guild_hall_style_02.iff")
+
+--Elite Ore Harv
+object_draft_schematic_structure_shared_installation_mining_ore_elite = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/structure/shared_installation_mining_ore_elite.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_structure_shared_installation_mining_ore_elite, "object/draft_schematic/structure/shared_installation_mining_ore_elite.iff")
+
+--Elite Liquid Harv
+object_draft_schematic_structure_shared_installation_mining_liquid_elite = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/structure/shared_installation_mining_liquid_elite.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_structure_shared_installation_mining_liquid_elite, "object/draft_schematic/structure/shared_installation_mining_liquid_elite.iff")
+
+--Elite Gas Harv
+object_draft_schematic_structure_shared_installation_mining_gas_heavy_elite = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/structure/shared_installation_mining_gas_heavy_elite.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_structure_shared_installation_mining_gas_heavy_elite, "object/draft_schematic/structure/shared_installation_mining_gas_heavy_elite.iff")
+
+--Elite Fusion
+object_draft_schematic_structure_shared_installation_generator_fusion_elite = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/structure/shared_installation_generator_fusion_elite.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_structure_shared_installation_generator_fusion_elite, "object/draft_schematic/structure/shared_installation_generator_fusion_elite.iff")
+
+--Elite Flora
+object_draft_schematic_structure_shared_installation_mining_organic_flora_elite = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/structure/shared_installation_mining_organic_flora_elite.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_structure_shared_installation_mining_organic_flora_elite, "object/draft_schematic/structure/shared_installation_mining_organic_flora_elite.iff")
+

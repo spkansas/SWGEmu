@@ -50,3 +50,6 @@ includeFile("installation/generators/power_generator_fusion_style_1.lua")
 includeFile("installation/generators/power_generator_photo_bio_style_1.lua")
 includeFile("installation/generators/power_generator_solar_style_1.lua")
 includeFile("installation/generators/power_generator_wind_style_1.lua")
+
+--Elite
+includeFile("installation/generators/power_generator_fusion_style_elite.lua")

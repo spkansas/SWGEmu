@@ -217,3 +217,11 @@ object_installation_mining_gas_shared_mining_gas_harvester_style_3 = SharedInsta
 }
 
 ObjectTemplates:addClientTemplate(object_installation_mining_gas_shared_mining_gas_harvester_style_3, "object/installation/mining_gas/shared_mining_gas_harvester_style_3.iff")
+
+object_installation_mining_gas_shared_mining_gas_harvester_elite = SharedInstallationObjectTemplate:new {
+	clientTemplateFileName = "object/installation/mining_gas/shared_mining_gas_harvester_elite.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_installation_mining_gas_shared_mining_gas_harvester_elite, "object/installation/mining_gas/shared_mining_gas_harvester_elite.iff")
+

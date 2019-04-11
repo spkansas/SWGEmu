@@ -53,3 +53,6 @@ includeFile("installation/mining_liquid/mining_liquid_moisture_harvester.lua")
 includeFile("installation/mining_liquid/mining_liquid_moisture_harvester_heavy.lua")
 includeFile("installation/mining_liquid/mining_liquid_moisture_harvester_medium.lua")
 includeFile("installation/mining_liquid/resource_harvester.lua")
+
+--Elite
+includeFile("installation/mining_liquid/mining_liquid_harvester_elite.lua")

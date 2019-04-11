@@ -276,3 +276,11 @@ object_installation_mining_organic_shared_mining_organic_flora_farm_medium = Sha
 }
 
 ObjectTemplates:addClientTemplate(object_installation_mining_organic_shared_mining_organic_flora_farm_medium, "object/installation/mining_organic/shared_mining_organic_flora_farm_medium.iff")
+
+--Elite
+object_installation_mining_organic_shared_mining_organic_flora_farm_elite = SharedInstallationObjectTemplate:new {
+	clientTemplateFileName = "object/installation/mining_organic/shared_mining_organic_flora_farm_elite.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_installation_mining_organic_shared_mining_organic_flora_farm_elite, "object/installation/mining_organic/shared_mining_organic_flora_farm_elite.iff")

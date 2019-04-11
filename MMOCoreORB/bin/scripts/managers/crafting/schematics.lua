@@ -42,6 +42,15 @@
 
 
 schematics = {
+
+  --Elite Harvesters
+	{path="object/draft_schematic/structure/installation_mining_ore_elite.iff"},
+	{path="object/draft_schematic/structure/installation_mining_gas_heavy_elite.iff"},
+	{path="object/draft_schematic/structure/installation_mining_liquid_elite.iff"},
+	{path="object/draft_schematic/structure/installation_mining_organic_flora_elite.iff"},
+	{path="object/draft_schematic/structure/installation_generator_fusion_elite.iff"},
+	
+  --Default Schems
 	{path="object/draft_schematic/community_crafting/component/connections.iff"},
 	{path="object/draft_schematic/community_crafting/component/endrost.iff"},
 	{path="object/draft_schematic/community_crafting/component/power_supply.iff"},

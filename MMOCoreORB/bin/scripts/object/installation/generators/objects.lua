@@ -276,3 +276,12 @@ object_installation_generators_shared_power_generator_wind_style_1 = SharedInsta
 }
 
 ObjectTemplates:addClientTemplate(object_installation_generators_shared_power_generator_wind_style_1, "object/installation/generators/shared_power_generator_wind_style_1.iff")
+
+-- Fusion Elite
+object_installation_generators_shared_power_generator_fusion_style_elite = SharedInstallationObjectTemplate:new {
+	clientTemplateFileName = "object/installation/generators/shared_power_generator_fusion_style_elite.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_installation_generators_shared_power_generator_fusion_style_elite, "object/installation/generators/shared_power_generator_fusion_style_elite.iff")
+

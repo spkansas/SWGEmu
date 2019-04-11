@@ -50,3 +50,6 @@ includeFile("installation/mining_ore/construction/serverobjects.lua")
 includeFile("installation/mining_ore/mining_ore_harvester_heavy.lua")
 includeFile("installation/mining_ore/mining_ore_harvester_style_1.lua")
 includeFile("installation/mining_ore/mining_ore_harvester_style_2.lua")
+
+--Elite
+includeFile("installation/mining_ore/mining_ore_harvester_elite.lua")

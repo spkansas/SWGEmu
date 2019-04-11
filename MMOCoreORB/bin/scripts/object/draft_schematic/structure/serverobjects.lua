@@ -46,6 +46,13 @@
 includeFile("draft_schematic/structure/city/serverobjects.lua")
 includeFile("draft_schematic/structure/component/serverobjects.lua")
 
+--Elite Harvesters
+includeFile("draft_schematic/structure/installation_mining_ore_elite.lua")
+includeFile("draft_schematic/structure/installation_mining_gas_heavy_elite.lua")
+includeFile("draft_schematic/structure/installation_mining_liquid_elite.lua")
+includeFile("draft_schematic/structure/installation_generator_fusion_elite.lua")
+includeFile("draft_schematic/structure/installation_mining_organic_flora_elite.lua")
+
 -- Server Objects
 includeFile("draft_schematic/structure/corellia_house_guild_hall.lua")
 includeFile("draft_schematic/structure/corellia_house_player_large.lua")
