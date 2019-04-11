@@ -984,3 +984,33 @@ object_tangible_deed_harvester_deed_shared_harvester_ore_s2_deed = SharedTangibl
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_deed_harvester_deed_shared_harvester_ore_s2_deed, "object/tangible/deed/harvester_deed/shared_harvester_ore_s2_deed.iff")
+
+--Elite Ore
+object_tangible_deed_harvester_deed_shared_harvester_ore_elite_deed = SharedTangibleObjectTemplate:new { 
+        clientTemplateFileName = "object/tangible/deed/harvester_deed/shared_harvester_ore_elite_deed.iff" 
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_harvester_deed_shared_harvester_ore_elite_deed, "object/tangible/deed/harvester_deed/shared_harvester_ore_elite_deed.iff")
+
+--Elite Gas
+object_tangible_deed_harvester_deed_shared_harvester_gas_deed_elite = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/harvester_deed/shared_harvester_gas_deed_elite.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_harvester_deed_shared_harvester_gas_deed_elite, "object/tangible/deed/harvester_deed/shared_harvester_gas_deed_elite.iff")
+
+-- Elite Liquid Chem
+object_tangible_deed_harvester_deed_shared_harvester_liquid_deed_elite = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/harvester_deed/shared_harvester_liquid_deed_elite.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_harvester_deed_shared_harvester_liquid_deed_elite, "object/tangible/deed/harvester_deed/shared_harvester_liquid_deed_elite.iff")
+
+
+object_tangible_deed_harvester_deed_shared_harvester_flora_deed_elite = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/harvester_deed/shared_harvester_flora_deed_elite.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_harvester_deed_shared_harvester_flora_deed_elite, "object/tangible/deed/harvester_deed/shared_harvester_flora_deed_elite.iff")
+
